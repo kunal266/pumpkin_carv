@@ -25,11 +25,16 @@ export default function App() {
     // const outputt = await window.contract.nft_metadata();
     // console.log(outputt);
     // if (outputt === null){
+
     e.preventDefault();
+    if (window.accountId==""){
+      alert("Please login to initialize the Contract")
+    }
+    else{
     await window.contract.new_default_meta({
       "owner_id":window.accountId
     },GAS)
-    console.log("contract initialized with ",window.accountId);
+    console.log("contract initialized with ",window.accountId);}
   // }
   }
   useEffect(async ()=>{
@@ -38,10 +43,14 @@ export default function App() {
     console.log(outputt);
   console.log("contract is set to bruh")}
     catch {
+      if (window.accountId==""){
+        alert("Please login to initialize the Contract")
+      }
+      else{
       await window.contract.new_default_meta({
         "owner_id":window.accountId
       },GAS)
-      console.log("contract initialized")
+      console.log("contract initialized")}
     }
   },[])
 

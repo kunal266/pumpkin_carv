@@ -8,8 +8,8 @@ const Mynft = props => {
         console.log("nft owned",nft_owned);
         setnftowned(nft_owned);
     },[])
-    const promptList = ["Who would win in Smash Bros?",
-"Who is the better actor",];
+//     const promptList = ["Who would win in Smash Bros?",
+// "Who is the better actor",];
 console.log("bft_bruh",nftbruh);
     return (
 <Container style={{minHeight:"100vh",marginTop:'5vh'}} className='justify-content-center  d-flex flex-wrap '>
